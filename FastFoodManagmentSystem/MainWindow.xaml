@@ -1,0 +1,80 @@
+﻿<Window x:Class="FastFoodManagmentSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FastFoodManagmentSystem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="728" Width="1024" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True"
+        Background="Transparent" ResizeMode="NoResize">
+
+    <Border CornerRadius="25 25 25 25" MouseDown="Border_MouseDown">
+        <Border.Background>
+            <ImageBrush ImageSource="/Images/MCDbackgroundImage.jpg" Stretch="UniformToFill" TileMode="FlipX"/>
+        </Border.Background>
+
+        <Border Margin="22,200,494,123">
+            <Border.Effect>
+                <DropShadowEffect Color="Gray" ShadowDepth="5" />
+            </Border.Effect>
+
+            <StackPanel  Background="White">
+
+
+                <Canvas Height="44" Panel.ZIndex="0" Width="506" Background="#FFB9160F">
+                    <Image x:Name="close" Source="/Images/close.png" Style="{StaticResource iconApp}" Margin="-5,-1,0,0" Height="44" Width="506" HorizontalAlignment="Right" VerticalAlignment="Center" Cursor="Hand" MouseLeftButtonDown="close_MouseLeftButtonDown" />
+                    <Canvas Height="95" Width="178" Canvas.Left="164" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Canvas.Background>
+                            <ImageBrush ImageSource="/Images/logo.jpg" Stretch="Uniform"/>
+                        </Canvas.Background>
+                    </Canvas>
+                </Canvas>
+                <StackPanel Height="279" Margin="0,57,0,0" Width="458">
+
+
+                    <Button x:Name="odrbtn" Content="ORDER NOW!"  Style="{DynamicResource rndbtn}" Background="{DynamicResource PrimaryRed}" Foreground="White" Height="96" Width="265" Margin="0,63,0,0" Click="Button_Click" />
+
+                    <Canvas Height="55" HorizontalAlignment="Center" Width="268">
+                        <Label Content="ADMIN? " FontFamily="{DynamicResource Montserrat}" FontSize="16" Canvas.Left="37" Canvas.Top="7" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="logintxt" TextDecorations="Underline" Cursor="Hand" MouseLeftButtonDown="logintxt_MouseLeftButtonDown" Text="Login Here" FontFamily="{DynamicResource Montserrat}"  Canvas.Left="37" Canvas.Top="7" FontSize="16" Height="29.5033333333333" Width="90" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="77,4,0,0"/>
+                    </Canvas>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+    </Border>
+
+</Window>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<StackPanel.Background>
+    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <RotateTransform Angle="45" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="#FFF6BD52" Offset="0"/>
+        <GradientStop Color="#FF9D3810" Offset="1"/>
+    </LinearGradientBrush>
+</StackPanel.Background>-->

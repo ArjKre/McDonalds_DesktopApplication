@@ -1,0 +1,247 @@
+﻿<Window x:Class="FastFoodManagmentSystem.Beverages"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FastFoodManagmentSystem"
+        mc:Ignorable="d"
+        Title="Beverages" Height="728" Width="1024"  WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True"
+        Background="Transparent" ResizeMode="NoResize">
+
+
+    <Grid MouseDown="Grid_MouseDown">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Panel.ZIndex="1" CornerRadius="15 15 0 0" Background="#b9160f">
+            <Grid>
+
+                <Image Source="/Images/logoTransparant.png" Margin="16,10,827,-63" />
+                <Image x:Name="close" Source="/Images/close.png" Style="{StaticResource iconApp}" Margin="0,0,15,0" MouseLeftButtonDown="close_MouseLeftButtonDown"/>
+                <Image x:Name="minimize" Source="/Images/minimize.png" Style="{StaticResource iconApp}" Margin="0,0,70,0" MouseLeftButtonDown="minimize_MouseLeftButtonDown" />
+
+                <Button x:Name="homebtn" Content="HOME" Style="{StaticResource rndbtn}"
+                    Width="140" Margin="490,28,394,-28" Background="{StaticResource SecondayYellow}"
+                        Foreground="White" Click="homebtn_Click"/>
+
+                <Button x:Name="Menubtn" Content="MENU" Style="{StaticResource rndbtn}"
+                    Width="140" Margin="301,28,583,-28"  Background="{StaticResource SecondayYellow}"
+                        Foreground="White" Click="Menubtn_Click"/>
+
+                <Button x:Name="Cartbtn" Content="CART" Style="{StaticResource rndbtn}"
+                    Width="140" Margin="683,28,201,-28"  Background="{StaticResource SecondayYellow}"
+                        Foreground="White" Click="Cartbtn_Click"/>
+            </Grid>
+
+        </Border>
+
+
+        <Border Grid.Row="1" CornerRadius="0 0 15 15">
+            <Border.Background>
+                <ImageBrush ImageSource="Images/qq_whatsinside_fries_f.jpg"/>
+            </Border.Background>
+
+            <Border BorderBrush="whitesmoke" Margin="40,52,40,28">
+                <Border.Effect>
+                    <DropShadowEffect Color="black"  ShadowDepth="5"/>
+                </Border.Effect>
+                <Grid  Background="white">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="41*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="50*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label BorderBrush="Gray" Grid.ColumnSpan="5" Margin="60,30,49,0" BorderThickness="0,0,0,1"/>
+                        <Label x:Name="burger" MouseLeftButtonDown="burger_MouseLeftButtonDown" Grid.Column="0" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Cursor="Hand" Margin="0,30,0,0">Burgers</Label>
+                        <Label Grid.Column="2" BorderBrush="#b9160f" BorderThickness="0,0,0,3" Margin="60,51,61,0"/>
+                        <Label x:Name="Sand" MouseLeftButtonDown="Sand_MouseLeftButtonDown" Grid.Column="1" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Cursor="Hand" Margin="0,30,0,0">Chicken &#38; Sandwiches</Label>
+                        <Label x:Name="BEV" Content="Beverages" Grid.Column="2" FontFamily="{StaticResource Carmen}" Foreground="#b9160f" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30,0,0" />
+                        <Label x:Name="Nuggets" MouseLeftButtonDown="Nuggets_MouseLeftButtonDown" Grid.Column="3" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Cursor="Hand" Margin="0,30,0,0">Happy Meal</Label>
+                        <Label x:Name="Treats" MouseLeftButtonDown="Treats_MouseLeftButtonDown" Grid.Column="4" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Bottom" HorizontalAlignment="Left" Cursor="Hand" Margin="10,0,0,6">Deserts &#38; Shakes</Label>
+                    </Grid>
+
+
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Row="0" Grid.Column="0" CornerRadius="5 5 5 5" BorderBrush="WhiteSmoke" BorderThickness="1" Margin="10 10 10 10">
+                            <Grid >
+                                <StackPanel Margin="20,10,20,96">
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/Menu/CocaCola.jpg" Stretch="Uniform"/>
+                                    </StackPanel.Background>
+
+                                </StackPanel>
+                                <Label Content="CocaCola" FontSize="12" FontFamily="{StaticResource Carmen}" Height="30" VerticalAlignment="Top" Margin="10,156,10,0"/>
+                                <Label Content="$1.39" Foreground="{StaticResource PrimaryRed}" FontFamily="{StaticResource Carmen}" FontSize="26" Margin="10,186,116,16"/>
+                                <Border>
+                                    <Border.Effect>
+                                        <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
+                                    </Border.Effect>
+                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                </Border>
+                            </Grid>
+                        </Border>
+
+
+                        <Border Grid.Row="0" Grid.Column="1" CornerRadius="5 5 5 5" BorderBrush="WhiteSmoke" BorderThickness="1" Margin="10 10 10 10">
+                            <Grid >
+                                <StackPanel Margin="20,10,20,96">
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/Menu/Diet Coke.jpg" Stretch="UniformToFill"/>
+                                    </StackPanel.Background>
+
+                                </StackPanel>
+                                <Label Content="Diet Coca Cola" FontSize="12" FontFamily="{StaticResource Carmen}" Height="30" VerticalAlignment="Top" Margin="10,156,10,0"/>
+                                <Label Content="$1.39" Foreground="{StaticResource PrimaryRed}" FontFamily="{StaticResource Carmen}" FontSize="26" Margin="10,186,116,16"/>
+                                <Border>
+                                    <Border.Effect>
+                                        <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
+                                    </Border.Effect>
+                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_1" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                </Border>
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="0" Grid.Column="2" CornerRadius="5 5 5 5" BorderBrush="WhiteSmoke" BorderThickness="1" Margin="10 10 10 10">
+                            <Grid >
+                                <StackPanel Margin="20,10,20,96">
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/Menu/Sprite.jpg" Stretch="Uniform"/>
+                                    </StackPanel.Background>
+
+                                </StackPanel>
+                                <Label Content="Sprite" FontSize="12" FontFamily="{StaticResource Carmen}" Height="51" VerticalAlignment="Top" Margin="10,156,10,0"/>
+                                <Label Content="$1.39" Foreground="{StaticResource PrimaryRed}" FontFamily="{StaticResource Carmen}" FontSize="26" Margin="10,186,116,16"/>
+                                <Border>
+                                    <Border.Effect>
+                                        <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
+                                    </Border.Effect>
+                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_2" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                </Border>
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="0" Grid.Column="3" CornerRadius="5 5 5 5" BorderBrush="WhiteSmoke" BorderThickness="1" Margin="10 10 10 10">
+                            <Grid >
+                                <StackPanel Margin="20,10,20,96">
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/Menu/hot tea.jpg" Stretch="Uniform"/>
+                                    </StackPanel.Background>
+
+                                </StackPanel>
+                                <Label Content="McCafe Hot Tea" FontSize="12" FontFamily="{StaticResource Carmen}" Height="51" VerticalAlignment="Top" Margin="10,156,10,0"/>
+                                <Label Content="$1.39" Foreground="{StaticResource PrimaryRed}" FontFamily="{StaticResource Carmen}" FontSize="26" Margin="10,186,116,16"/>
+                                <Border>
+                                    <Border.Effect>
+                                        <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
+                                    </Border.Effect>
+                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_3" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                </Border>
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="1" Grid.Column="0" CornerRadius="5 5 5 5" BorderBrush="WhiteSmoke" BorderThickness="1" Margin="10 10 10 10">
+                            <Grid >
+                                <StackPanel Margin="20,10,20,96">
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/Menu/Sweet Tea.jpg" Stretch="UniformToFill"/>
+                                    </StackPanel.Background>
+
+                                </StackPanel>
+                                <Label Content="McCafe Sweet Tea" FontSize="12" FontFamily="{StaticResource Carmen}" Height="51" VerticalAlignment="Top" Margin="10,156,10,0"/>
+                                <Label Content="$1.39" Foreground="{StaticResource PrimaryRed}" FontFamily="{StaticResource Carmen}" FontSize="26" Margin="10,186,116,16"/>
+                                <Border>
+                                    <Border.Effect>
+                                        <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
+                                    </Border.Effect>
+                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_4" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                </Border>
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="5 5 5 5" BorderBrush="WhiteSmoke" BorderThickness="1" Margin="10 10 10 10">
+                            <Grid >
+                                <StackPanel Margin="20,10,20,96">
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/Menu/Strawberry Shake.jpg" Stretch="UniformToFill"/>
+                                    </StackPanel.Background>
+
+                                </StackPanel>
+                                <Label Content="McCafe Strawberry &#38; &#10; Banana Smoothie" FontSize="12" FontFamily="{StaticResource Carmen}" Height="51" VerticalAlignment="Top" Margin="10,156,10,0"/>
+                                <Label Content="$2.89" Foreground="{StaticResource PrimaryRed}" FontFamily="{StaticResource Carmen}" FontSize="26" Margin="10,186,116,16"/>
+                                <Border>
+                                    <Border.Effect>
+                                        <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
+                                    </Border.Effect>
+                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_5" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                </Border>
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="1" Grid.Column="2" CornerRadius="5 5 5 5" BorderBrush="WhiteSmoke" BorderThickness="1" Margin="10 10 10 10">
+                            <Grid >
+                                <StackPanel Margin="20,10,20,96">
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/Menu/Mango Smoothie.jpg" Stretch="UniformToFill"/>
+                                    </StackPanel.Background>
+
+                                </StackPanel>
+                                <Label Content="McCafe Mango &#38; &#10; Pineapple Smoothie" FontSize="12" FontFamily="{StaticResource Carmen}" Height="51" VerticalAlignment="Top" Margin="10,156,10,0"/>
+                                <Label Content="$2.89" Foreground="{StaticResource PrimaryRed}" FontFamily="{StaticResource Carmen}" FontSize="26" Margin="10,186,116,16"/>
+                                <Border>
+                                    <Border.Effect>
+                                        <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
+                                    </Border.Effect>
+                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_6" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                </Border>
+                            </Grid>
+                        </Border>
+
+                        <Border Grid.Row="1" Grid.Column="3" CornerRadius="5 5 5 5" BorderBrush="WhiteSmoke" BorderThickness="1" Margin="10 10 10 10">
+                            <Grid >
+                                <StackPanel Margin="20,10,20,96">
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/Menu/Fanta.jpg" Stretch="UniformToFill"/>
+                                    </StackPanel.Background>
+
+                                </StackPanel>
+                                <Label Content="Fanta" FontSize="12" FontFamily="{StaticResource Carmen}" Height="51" VerticalAlignment="Top" Margin="10,156,10,0"/>
+                                <Label Content="$1.39" Foreground="{StaticResource PrimaryRed}" FontFamily="{StaticResource Carmen}" FontSize="26" Margin="10,186,116,16"/>
+                                <Border>
+                                    <Border.Effect>
+                                        <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
+                                    </Border.Effect>
+                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_7" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                </Border>
+                            </Grid>
+                        </Border>
+
+                    </Grid>
+                </Grid>
+            </Border>
+        </Border>
+    </Grid>
+</Window>

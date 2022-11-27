@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastFoodManagmentSystem", "FastFoodManagmentSystem\FastFoodManagmentSystem.csproj", "{002E8A31-5503-400B-AA13-F4C2A4007298}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{002E8A31-5503-400B-AA13-F4C2A4007298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{002E8A31-5503-400B-AA13-F4C2A4007298}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{002E8A31-5503-400B-AA13-F4C2A4007298}.Debug|x86.ActiveCfg = Debug|x86
+		{002E8A31-5503-400B-AA13-F4C2A4007298}.Debug|x86.Build.0 = Debug|x86
+		{002E8A31-5503-400B-AA13-F4C2A4007298}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{002E8A31-5503-400B-AA13-F4C2A4007298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{002E8A31-5503-400B-AA13-F4C2A4007298}.Release|x86.ActiveCfg = Release|x86
+		{002E8A31-5503-400B-AA13-F4C2A4007298}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7940599-6E7B-4931-BF05-CB7A619E9D1C}
+	EndGlobalSection
+EndGlobal

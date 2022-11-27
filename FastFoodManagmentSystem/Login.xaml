@@ -1,0 +1,74 @@
+﻿<Window x:Class="FastFoodManagmentSystem.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FastFoodManagmentSystem"
+        mc:Ignorable="d"
+        Title="Login" Height="728" Width="1024" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True"
+        Background="Transparent" ResizeMode="NoResize">
+
+    <Border CornerRadius="25 25 25 25" MouseDown="Border_MouseDown">
+        <Border.Background>
+            <ImageBrush ImageSource="/Images/MCDbackgroundImage.jpg" Stretch="UniformToFill" TileMode="FlipX"/>
+        </Border.Background>
+
+        <Border Margin="22,200,494,123">
+            <Border.Effect>
+                <DropShadowEffect Color="Gray" ShadowDepth="5" />
+            </Border.Effect>
+
+            <StackPanel  Background="White">
+
+
+                <Canvas Height="44" Panel.ZIndex="0" Width="506" Background="#FFB9160F">
+                    <Image x:Name="close" Style="{StaticResource iconApp}" Source="/Images/close.png" Height="44" Width="506" HorizontalAlignment="Right" VerticalAlignment="Center" Cursor="Hand" MouseLeftButtonDown="close_MouseLeftButtonDown" Margin="-5,-1,0,0" />
+                    <Image x:Name="back" Style="{StaticResource iconApp}" Source="/Images/back.png"   Height="44" Width="467" Cursor="Hand" MouseLeftButtonDown="back_MouseLeftButtonDown" Margin="-12,-1,0,0"/>
+                    <Canvas Height="95" Width="178" Canvas.Left="164" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Canvas.Background>
+                            <ImageBrush ImageSource="/Images/logo.jpg" Stretch="Uniform"/>
+                        </Canvas.Background>
+                    </Canvas>
+                </Canvas>
+
+                <StackPanel Height="304" Margin="0,57,0,0" Width="503">
+                    <StackPanel>
+                        <Label Content="Log In" FontSize="42" HorizontalContentAlignment="Center"
+                               FontFamily="{DynamicResource Montserrat}"/>
+                    </StackPanel>
+                    <StackPanel Height="151" Width="438">
+                        <TextBox x:Name="usertxt" Tag="Username" Height="35" Width="270" FontSize="25"
+                                 Style="{DynamicResource CW-Inline-TextBox}"
+                                  FontFamily="{DynamicResource Montserrat}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,35,0,0"/>
+
+                        <TextBox x:Name="passtxt" Tag="Password" Height="35" Width="270" FontSize="25"
+                                 Style="{DynamicResource CW-Inline-TextBox}"
+                                  FontFamily="{DynamicResource Password}" Margin="0,40,0,0">
+                            <TextBox.InputBindings>
+                                <!--Disable CTRL+C (COPY) -->
+                                <KeyBinding Command="ApplicationCommands.NotACommand"
+                                    Key="C"
+                                    Modifiers="Control" />
+                                <!--Disable CTRL+X (CUT) -->
+                                <KeyBinding Command="ApplicationCommands.NotACommand"
+                                    Key="X"
+                                    Modifiers="Control" />
+                            </TextBox.InputBindings>
+                            <TextBox.ContextMenu>
+                                <!--Hide context menu where you could copy/cut as well -->
+                                <ContextMenu Visibility="Collapsed" />
+                            </TextBox.ContextMenu>
+                        </TextBox>
+
+                    </StackPanel>
+
+                    <Button Content="Log in" Style="{StaticResource rndbtn}" Background="{DynamicResource PrimaryRed}" Foreground="White" Width="214" Height="58" VerticalAlignment="Center" Margin="0,20,0,0" Click="Button_Click"/>
+
+                </StackPanel>
+
+            </StackPanel>
+        </Border>
+
+    </Border>
+
+</Window>

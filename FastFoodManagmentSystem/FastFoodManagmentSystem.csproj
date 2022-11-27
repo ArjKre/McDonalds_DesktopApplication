@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{002E8A31-5503-400B-AA13-F4C2A4007298}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FastFoodManagmentSystem</RootNamespace>
+    <AssemblyName>FastFoodManagmentSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\Desktop.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Beverages.xaml.cs">
+      <DependentUpon>Beverages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HappyMeal.xaml.cs">
+      <DependentUpon>HappyMeal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sandwiches.xaml.cs">
+      <DependentUpon>Sandwiches.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Treats.xaml.cs">
+      <DependentUpon>Treats.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Beverages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HappyMeal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cart.xaml.cs">
+      <DependentUpon>Cart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sandwiches.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Treats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Fonts\Insaniburger-0OZ9.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\InsaniburgerWithCheese-47Dp.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Poppins-Medium.ttf" />
+    <Resource Include="Fonts\Montserrat-SemiBold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Montserrat-SemiBoldItalic.ttf" />
+    <Resource Include="Fonts\password.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Protofo Medium.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Carmen Sans SemiBold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MCDbackgroundImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Desktop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mcdonalds.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\Big Mac.jpg" />
+    <Resource Include="Images\Menu\Cheeseburger.jpg" />
+    <Resource Include="Images\Menu\CocaCola.jpg" />
+    <Resource Include="Images\Menu\Mcnuggets.jpg" />
+    <Resource Include="Images\Menu\SmokyBLTDoubleQPC.jpg" />
+    <Resource Include="Images\Menu\spicy chicken sandwich.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\Smoky BLT Quater Pounder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\Quater Pounder With Cheese.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HomeBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logoTransparant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Slideshow\poster4.jpg" />
+    <Resource Include="Images\Slideshow\poster1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Slideshow\poster2.jpg" />
+    <Resource Include="Images\Slideshow\poster3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\Double Cheeseburger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\qq_whatsinside_fries_f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Notes\PrevMenu.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\basket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\Bacon bbq burger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\Mcplant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\Triple Double Cheeseburger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\deluxe crispy chicken sandwich.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\Filet O Fish.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\McChicken.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\Diet Coke.jpg" />
+    <Resource Include="Images\Menu\hot tea.jpg" />
+    <Resource Include="Images\Menu\Mango Smoothie.jpg" />
+    <Resource Include="Images\Menu\Sprite.jpg" />
+    <Resource Include="Images\Menu\Strawberry shake.jpg" />
+    <Resource Include="Images\Menu\Sweet Tea.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\fanta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\6 piece.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\4piece.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\hamburger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\Baked Apple Pie.jpg" />
+    <Resource Include="Images\Menu\Cookie.jpg" />
+    <Resource Include="Images\Menu\flurry mms.jpg" />
+    <Resource Include="Images\Menu\Hot Caramel Sundae.jpg" />
+    <Resource Include="Images\Menu\Hot fudge Sundae.jpg" />
+    <Resource Include="Images\Menu\oreo flurry.jpg" />
+    <Resource Include="Images\Menu\Oreo fudge flurry.jpg" />
+    <Resource Include="Images\Menu\Vanilla Cone.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
