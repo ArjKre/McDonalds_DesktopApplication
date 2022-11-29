@@ -67,10 +67,10 @@
                         <Label BorderBrush="Gray" Grid.ColumnSpan="5" Margin="60,30,49,0" BorderThickness="0,0,0,1"/>
                         <Label x:Name="burger" MouseLeftButtonDown="burger_MouseLeftButtonDown" Grid.Column="0" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Cursor="Hand" Margin="0,30,0,0">Burgers</Label>
                         <Label Grid.Column="3" BorderBrush="#b9160f" BorderThickness="0,0,0,3" Margin="60,51,61,0"/>
-                        <Label x:Name="Sand" MouseLeftButtonDown="Sand_MouseLeftButtonDown" Grid.Column="1" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Cursor="Hand" Margin="0,30,0,0">Chicken &#38; Sandwiches</Label>
+                        <Label x:Name="Sand" MouseLeftButtonDown="Sand_MouseLeftButtonDown" Grid.Column="1" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Cursor="Hand" Margin="0,30,0,0" Content="Sandwiches &amp; Fries"/>
                         <Label x:Name="Beverages" MouseLeftButtonDown="Beverages_MouseLeftButtonDown" Grid.Column="2" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Cursor="Hand" Margin="0,30,0,0">Beverages</Label>
                         <Label x:Name="happyMeal" MouseLeftButtonDown="happyMeal_MouseLeftButtonDown" Grid.Column="3" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Cursor="Hand" Margin="0,30,0,0" Foreground="#b9160f">Happy Meal</Label>
-                        <Label x:Name="Treats" MouseLeftButtonDown="Treats_MouseLeftButtonDown" Grid.Column="4" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Bottom" HorizontalAlignment="Left" Cursor="Hand" Margin="10,0,0,6">Deserts &#38; Shakes</Label>
+                        <Label x:Name="Treats" MouseLeftButtonDown="Treats_MouseLeftButtonDown" Grid.Column="4" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Bottom" HorizontalAlignment="Left" Cursor="Hand" Margin="10,0,0,6" Content="Desserts &amp; Shakes"/>
                     </Grid>
 
 

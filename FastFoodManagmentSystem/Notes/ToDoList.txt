@@ -1,0 +1,22 @@
+﻿
+
+
+To Do List
+
+				IMPORTANT FIXES
+>Using Table , when item's button is clicked it is sent to the cart page. [DONE]
+>remove btn should remove item from cart.                                  [DONE]
+>scroll features for more items in cart.{kinda already implemented in a way..}[DONE]
+>Quantity button fixing inc & dec.                                            [DONE]
+>subtotal,delv,tax & total should be fixed.                                   []
+>When clicked checkout user info is sent to the Userinfo table.               []
+
+					
+					LATER-ON CHANGES
+>should implement a payment page with payment features.
+>admin page with a home screen- orders,users,portfolio tacking,{something else...needs thinking}.
+>make these pages. 👆
+>logout button for admin & back button to login to admin.
+>Remove Btn hover shitty blue colour.
+>Homescreen cascat, add an ease-in animation{needs more reasearch}.
+

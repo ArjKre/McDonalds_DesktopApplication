@@ -104,3 +104,35 @@
 
 	</Grid>
 </Border>
+
+
+<!--<Grid Margin="0,28,0,0" Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="33*"/>
+                                <RowDefinition Height="29*"/>
+                                <RowDefinition Height="30*"/>
+                                <RowDefinition Height="79*"/>
+                            </Grid.RowDefinitions>
+
+                            <Canvas Grid.Row="0" Margin="0,0,0,25" Grid.RowSpan="2">
+                                <Label Content="Item Subtotal" FontFamily="{StaticResource Montserrat}"  Grid.Row="1" Canvas.Left="10"  HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="10" Width="131"/>
+                                <TextBlock x:Name="amnttxt" FontFamily="{StaticResource Montserrat}" FontSize="16" Text="100.00" HorizontalAlignment="Center" VerticalAlignment="Center" Width="89" Height="21" Canvas.Left="196" Canvas.Top="15"/>
+                            </Canvas>
+                            <Canvas Grid.Row="1" Margin="0,0,0,1">
+                                <Label Content="Delivery" FontFamily="{StaticResource Montserrat}"  FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="10"/>
+                                <TextBlock x:Name="devtxt" FontFamily="{StaticResource Montserrat}" FontSize="16" Text="100.00" HorizontalAlignment="Left" VerticalAlignment="Center" Width="89" Canvas.Left="196" Canvas.Top="5"/>
+                            </Canvas>
+                            <Canvas Grid.Row="2" Margin="0,0,0,4">
+                                <Label Content="Tax" FontFamily="{StaticResource Montserrat}"  FontSize="16"  Canvas.Left="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="78" RenderTransformOrigin="0.361,0.445"/>
+                                <TextBlock x:Name="taxtxt" FontFamily="{StaticResource Montserrat}" FontSize="16" Text="100.00" Canvas.Left="196"  HorizontalAlignment="Left" VerticalAlignment="Center" Width="89" Canvas.Top="5"/>
+                            </Canvas>
+                            <Canvas Grid.Row="3">
+                                <Label BorderBrush="Gray" BorderThickness="0,1,0,0" Height="14" Width="249" Canvas.Left="16" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            </Canvas>
+                            <Canvas Grid.Row="3">
+                                <Label Content="Total" FontSize="30" FontFamily="{StaticResource Montserrat}" Canvas.Left="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="92"/>
+                                <TextBlock x:Name="totaltxt" FontSize="30" FontFamily="{StaticResource Montserrat}" Text="100.00" Canvas.Left="174"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Canvas.Top="5"/>
+                                
+                            </Canvas>
+
+                        </Grid>-->

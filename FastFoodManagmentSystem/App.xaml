@@ -22,11 +22,11 @@
         </FontFamily>
 
         <FontFamily x:Key="Carmen">
-            C:\Users\ArjunKre\Desktop\FFMS\FastFoodManagmentSystem\Fonts\#Carmen Sans SemiBold.ttf
+            Fonts\#Carmen Sans SemiBold.ttf
         </FontFamily>
 
         <FontFamily x:Key="Protofo">
-            C:\Users\ArjunKre\Desktop\FFMS\FastFoodManagmentSystem\Fonts\#Protofo Medium.ttf
+            Fonts\#Protofo Medium.ttf
         </FontFamily>
 
         <SolidColorBrush x:Key="primaryYellow" Color="#FFF10A"/>
@@ -230,7 +230,7 @@
             </Setter>
         </Style>
 
-        <!--SCROLLBARS-->
+        <!--SCROLLBARS--><!--
         
         <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
             <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
@@ -288,7 +288,7 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-        </Style>
+        </Style>-->
 
 
     </Application.Resources>

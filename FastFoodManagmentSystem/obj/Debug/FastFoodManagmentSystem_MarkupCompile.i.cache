@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ArjunKre\Desktop\FFMS\FastFoodManagmentSystem\obj\Debug\
+C:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\obj\Debug\
 FastFoodManagmentSystem
 none
 false
 DEBUG;TRACE
-C:\Users\ArjunKre\Desktop\FFMS\FastFoodManagmentSystem\App.xaml
-9-991444377
+C:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\App.xaml
+101241096871
 
-14-1749704056
+16909906765
 161314364606
-Beverages.xaml;Cart.xaml;HappyMeal.xaml;Home.xaml;Login.xaml;MainWindow.xaml;Menu.xaml;Sandwiches.xaml;Treats.xaml;
+Beverages.xaml;Cart.xaml;CartUserControl.xaml;HappyMeal.xaml;Home.xaml;Login.xaml;MainWindow.xaml;Menu.xaml;Sandwiches.xaml;Treats.xaml;
 
 True
 

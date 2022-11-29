@@ -1,5 +1,7 @@
-﻿using System;
+﻿using FastFoodManagmentSystem.Fonts;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,8 +21,11 @@ namespace FastFoodManagmentSystem
     /// </summary>
     public partial class Cart : Window
     {
+        public static decimal v;
+        public static Cart cartInst;
         public Cart()
         {
+            cartInst = this;
             InitializeComponent();
         }
 
@@ -57,5 +62,41 @@ namespace FastFoodManagmentSystem
             menu.Show();
             this.Hide();
         }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            fetchData();
+
+        }
+
+       public void fetchData()
+        {
+            if(DatabaseConnection.connection.State != System.Data.ConnectionState.Open)
+            {
+                DatabaseConnection.connection.Open();
+            }
+            cart_stck.Children.Clear();
+            SqlCommand cmd = new SqlCommand("select * from Cart_tbl", DatabaseConnection.connection);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                cart_stck.Children.Add(new CartUserControl
+                {
+                    _Name = reader["Prod_name"].ToString(),
+                    Image = reader["Thumbnail"].ToString(),
+                    Price = reader["Price"].ToString(),
+                });
+            }
+            DatabaseConnection.connection.Close();
+           
+        }
+
+        
+        private void chckbtn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        
+
     }
 }

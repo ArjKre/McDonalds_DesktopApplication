@@ -84,6 +84,10 @@
     <Compile Include="Beverages.xaml.cs">
       <DependentUpon>Beverages.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CartUserControl.xaml.cs">
+      <DependentUpon>CartUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="HappyMeal.xaml.cs">
       <DependentUpon>HappyMeal.xaml</DependentUpon>
     </Compile>
@@ -98,6 +102,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Cart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CartUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -226,9 +234,6 @@
     <Resource Include="Images\Menu\spicy chicken sandwich.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Menu\Smoky BLT Quater Pounder.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Menu\Quater Pounder With Cheese.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -310,6 +315,17 @@
     <Resource Include="Images\Menu\oreo flurry.jpg" />
     <Resource Include="Images\Menu\Oreo fudge flurry.jpg" />
     <Resource Include="Images\Menu\Vanilla Cone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\minus.png" />
+    <Resource Include="Images\multiply.png" />
+    <Resource Include="Images\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menu\Fries.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Notes\ToDoList.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

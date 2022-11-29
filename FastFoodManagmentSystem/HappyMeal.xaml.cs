@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,10 +75,7 @@ namespace FastFoodManagmentSystem
             Close();
         }
 
-        private void happyMeal_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
+       
 
         private void Treats_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -95,17 +93,34 @@ namespace FastFoodManagmentSystem
 
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            DatabaseConnection.connection.Open();
+            DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 23", DatabaseConnection.connection);
+            DatabaseConnection.command.ExecuteNonQuery();
+            DatabaseConnection.connection.Close();
         }
 
         private void Image_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
         {
-
+            DatabaseConnection.connection.Open();
+            DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 24", DatabaseConnection.connection);
+            DatabaseConnection.command.ExecuteNonQuery();
+            DatabaseConnection.connection.Close();
         }
 
         private void Image_MouseLeftButtonDown_2(object sender, MouseButtonEventArgs e)
         {
+            DatabaseConnection.connection.Open();
+            DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 25", DatabaseConnection.connection);
+            DatabaseConnection.command.ExecuteNonQuery();
+            DatabaseConnection.connection.Close();
 
+        }
+
+        private void happyMeal_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            HappyMeal happyMeal = new HappyMeal();
+            happyMeal.Show();
+            Close();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,42 +63,66 @@ namespace FastFoodManagmentSystem
 
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            DatabaseConnection.connection.Open();
+            DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 15", DatabaseConnection.connection);
+            DatabaseConnection.command.ExecuteNonQuery();
+            DatabaseConnection.connection.Close();
         }
 
         private void Image_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
         {
-
+            DatabaseConnection.connection.Open();
+            DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 16", DatabaseConnection.connection);
+            DatabaseConnection.command.ExecuteNonQuery();
+            DatabaseConnection.connection.Close();
         }
 
         private void Image_MouseLeftButtonDown_2(object sender, MouseButtonEventArgs e)
         {
-
+            DatabaseConnection.connection.Open();
+            DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 17", DatabaseConnection.connection);
+            DatabaseConnection.command.ExecuteNonQuery();
+            DatabaseConnection.connection.Close();
         }
 
         private void Image_MouseLeftButtonDown_3(object sender, MouseButtonEventArgs e)
         {
-
+            DatabaseConnection.connection.Open();
+            DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 18", DatabaseConnection.connection);
+            DatabaseConnection.command.ExecuteNonQuery();
+            DatabaseConnection.connection.Close();
         }
 
         private void Image_MouseLeftButtonDown_4(object sender, MouseButtonEventArgs e)
         {
-
+            DatabaseConnection.connection.Open();
+            DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 19", DatabaseConnection.connection);
+            DatabaseConnection.command.ExecuteNonQuery();
+            DatabaseConnection.connection.Close();
         }
 
         private void Image_MouseLeftButtonDown_5(object sender, MouseButtonEventArgs e)
         {
-
+            DatabaseConnection.connection.Open();
+            DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 20", DatabaseConnection.connection);
+            DatabaseConnection.command.ExecuteNonQuery();
+            DatabaseConnection.connection.Close();
         }
 
         private void Image_MouseLeftButtonDown_6(object sender, MouseButtonEventArgs e)
         {
-
+            DatabaseConnection.connection.Open();
+            DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 21", DatabaseConnection.connection);
+            DatabaseConnection.command.ExecuteNonQuery();
+            DatabaseConnection.connection.Close();
         }
 
         private void Image_MouseLeftButtonDown_7(object sender, MouseButtonEventArgs e)
         {
-
+            DatabaseConnection.connection.Open();
+            DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 22", DatabaseConnection.connection);
+            DatabaseConnection.command.ExecuteNonQuery();
+            DatabaseConnection.connection.Close();
         }
 
         private void burger_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

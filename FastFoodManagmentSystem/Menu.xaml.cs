@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,9 @@ namespace FastFoodManagmentSystem
     /// </summary>
     public partial class Menu : Window
     {
+        SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-9NS1BJAQ\SQLEXPRESS;Initial Catalog=dtbs_FFMS;Integrated Security=True");
+        SqlCommand cmd;
+        
         public Menu()
         {
             InitializeComponent();
@@ -62,42 +66,66 @@ namespace FastFoodManagmentSystem
 
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            conn.Open();
+            cmd = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 1",conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
         private void Image_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
         {
-
+            conn.Open();
+            cmd = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 2", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
         private void Image_MouseLeftButtonDown_2(object sender, MouseButtonEventArgs e)
         {
-
+            conn.Open();
+            cmd = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 3", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
         private void Image_MouseLeftButtonDown_3(object sender, MouseButtonEventArgs e)
         {
-
+            conn.Open();
+            cmd = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 4", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
         private void Image_MouseLeftButtonDown_4(object sender, MouseButtonEventArgs e)
         {
-
+            conn.Open();
+            cmd = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 5", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
         private void Image_MouseLeftButtonDown_5(object sender, MouseButtonEventArgs e)
         {
-
+            conn.Open();
+            cmd = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 6", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
         private void Image_MouseLeftButtonDown_6(object sender, MouseButtonEventArgs e)
         {
-
+            conn.Open();
+            cmd = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 7", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
         private void Image_MouseLeftButtonDown_7(object sender, MouseButtonEventArgs e)
         {
-
+            conn.Open();
+            cmd = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 8", conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
         private void burger_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

@@ -67,10 +67,10 @@
                         <Label BorderBrush="Gray" Grid.ColumnSpan="5" Margin="60,30,49,0" BorderThickness="0,0,0,1"/>
                         <Label x:Name="burger" MouseLeftButtonDown="burger_MouseLeftButtonDown" Grid.Column="0" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Cursor="Hand" Margin="0,30,0,0">Burgers</Label>
                         <Label Grid.Column="1" BorderBrush="#b9160f" BorderThickness="0,0,0,3" Margin="60,51,61,0"/>
-                        <Label x:Name="Sand" MouseLeftButtonDown="Sand_MouseLeftButtonDown" Grid.Column="1" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Cursor="Hand" Foreground="#b9160f" Margin="0,30,0,0">Chicken &#38; Sandwiches</Label>
+                        <Label x:Name="Sand" MouseLeftButtonDown="Sand_MouseLeftButtonDown" Grid.Column="1" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Cursor="Hand" Foreground="#b9160f" Margin="0,30,0,0" Content="Sandwiches &amp; Fries"/>
                         <Label x:Name="Beverages" MouseLeftButtonDown="Beverages_MouseLeftButtonDown" Grid.Column="2" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Cursor="Hand" Margin="0,30,0,0">Beverages</Label>
                         <Label x:Name="happyMeal" MouseLeftButtonDown="happyMeal_MouseLeftButtonDown" Grid.Column="3" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Center" Cursor="Hand" Margin="0,30,0,0">Happy Meal</Label>
-                        <Label x:Name="Treats" MouseLeftButtonDown="Treats_MouseLeftButtonDown" Grid.Column="4" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Bottom" HorizontalAlignment="Left" Cursor="Hand" Margin="10,0,0,6">Deserts &#38; Shakes</Label>
+                        <Label x:Name="Treats" MouseLeftButtonDown="Treats_MouseLeftButtonDown" Grid.Column="4" FontFamily="{StaticResource Carmen}" FontSize="14" VerticalAlignment="Bottom" HorizontalAlignment="Left" Cursor="Hand" Margin="10,0,0,6" Content="Desserts &amp; Shakes"/>
                     </Grid>
 
 
@@ -94,7 +94,7 @@
                                     </StackPanel.Background>
 
                                 </StackPanel>
-                                <Label Content="Spicy Crispy Chicken Burger" FontSize="12" FontFamily="{StaticResource Carmen}" Height="30" VerticalAlignment="Top" Margin="10,156,10,0"/>
+                                <Label Content="Spicy Crispy Chicken Sandwich" FontSize="12" FontFamily="{StaticResource Carmen}" Height="30" VerticalAlignment="Top" Margin="10,156,10,0"/>
                                 <Label Content="$2.39" Foreground="{StaticResource PrimaryRed}" FontFamily="{StaticResource Carmen}" FontSize="26" Margin="10,186,116,16"/>
                                 <Border>
                                     <Border.Effect>
@@ -108,13 +108,13 @@
 
                         <Border Grid.Row="0" Grid.Column="1" CornerRadius="5 5 5 5" BorderBrush="WhiteSmoke" BorderThickness="1" Margin="10 10 10 10">
                             <Grid >
-                                <StackPanel Margin="20,10,20,96">
+                                <StackPanel Margin="20,32,31,96">
                                     <StackPanel.Background>
                                         <ImageBrush ImageSource="/Images/Menu/deluxe crispy chicken sandwich.jpg" Stretch="UniformToFill"/>
                                     </StackPanel.Background>
 
                                 </StackPanel>
-                                <Label Content="Deluxe Crispy Chicken Sandwich" FontSize="12" FontFamily="{StaticResource Carmen}" Height="30" VerticalAlignment="Top" Margin="10,156,10,0"/>
+                                <Label Content="Deluxe Crispy Chicken Sandwich" FontSize="12" FontFamily="{StaticResource Carmen}" Height="51" VerticalAlignment="Top" Margin="0,156,0,0"/>
                                 <Label Content="$3.39" Foreground="{StaticResource PrimaryRed}" FontFamily="{StaticResource Carmen}" FontSize="26" Margin="10,186,116,16"/>
                                 <Border>
                                     <Border.Effect>
@@ -167,7 +167,7 @@
                             <Grid >
                                 <StackPanel Margin="20,10,20,96">
                                     <StackPanel.Background>
-                                        <ImageBrush ImageSource="/Images/Menu/McChicken.jpg" Stretch="UniformToFill"/>
+                                        <ImageBrush ImageSource="/Images/Menu/McChicken.jpg" Stretch="Uniform"/>
                                     </StackPanel.Background>
 
                                 </StackPanel>
@@ -182,6 +182,24 @@
                             </Grid>
                         </Border>
 
+                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="5 5 5 5" BorderBrush="WhiteSmoke" BorderThickness="1" Margin="10 10 10 10">
+                            <Grid >
+                                <StackPanel Margin="20,10,20,96">
+                                    <StackPanel.Background>
+                                        <ImageBrush ImageSource="/Images/Menu/Fries.jpg" Stretch="UniformToFill"/>
+                                    </StackPanel.Background>
+
+                                </StackPanel>
+                                <Label Content="McFries" FontSize="12" FontFamily="{StaticResource Carmen}" Height="51" VerticalAlignment="Top" Margin="10,156,10,0"/>
+                                <Label Content="$1.29" Foreground="{StaticResource PrimaryRed}" FontFamily="{StaticResource Carmen}" FontSize="26" Margin="10,186,116,16"/>
+                                <Border>
+                                    <Border.Effect>
+                                        <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
+                                    </Border.Effect>
+                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_5" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                </Border>
+                            </Grid>
+                        </Border>
 
 
 
