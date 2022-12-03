@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,8 +22,12 @@ namespace FastFoodManagmentSystem
     /// </summary>
     public partial class Cart : Window
     {
+       public double subTotal;
         public static decimal v;
         public static Cart cartInst;
+        public double tax;
+        public double finalamount;
+        public double dev;
         public Cart()
         {
             cartInst = this;
@@ -65,6 +70,7 @@ namespace FastFoodManagmentSystem
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             fetchData();
+            
 
         }
 
@@ -85,18 +91,30 @@ namespace FastFoodManagmentSystem
                     Image = reader["Thumbnail"].ToString(),
                     Price = reader["Price"].ToString(),
                 });
+                subTotal += double.Parse(reader["Price"].ToString());
             }
             DatabaseConnection.connection.Close();
-           
+            subtl.Content = $"$ {subTotal}";
+
+            tax = subTotal * 0.25;
+            taxtl.Content = $"$ {tax.ToString("0.00")}";
+            finalamount = subTotal + tax + dev + 10.00;
+            total.Content= $"$ {finalamount.ToString("0.00")}";
+
         }
 
-        
-        private void chckbtn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+
+
+
+
+        private void chckbtn_Click(object sender, RoutedEventArgs e)
         {
 
+                    //   CUSTOMER INFO 
+            //DatabaseConnection.connection.Open();
+            //DatabaseConnection.command = new SqlCommand($"INSERT INTO Customer_tbl(First_Name,Last_Name, Phone_Number, Email, Street_Address,Apt_loc,City,State,Zip_code) " +
+            //$"Values('{fnametxt.Text}','{lnametxt.Text}','{numtxt.Text}','{emailtxt.Text}','{addtxt.Text}','{optxt.Text}','{citytxt.Text}','{statetxt.Text}','{ziptxt.Text}')",DatabaseConnection.connection);
+            //DatabaseConnection.command.ExecuteNonQuery();
         }
-
-        
-
     }
 }

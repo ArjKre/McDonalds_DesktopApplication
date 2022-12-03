@@ -26,6 +26,7 @@ namespace FastFoodManagmentSystem.Fonts
         private string _image;
         private string _price;
         private int i = 1;
+        private double price;
         public double qtnprice;
         public CartUserControl()
         {
@@ -54,7 +55,7 @@ namespace FastFoodManagmentSystem.Fonts
         {
             get { return _price; }
             set { _price = value;
-                checkprc.Text = value;
+                checkprc.Text = $"$ {value}";
             }
 
         }
@@ -77,11 +78,16 @@ namespace FastFoodManagmentSystem.Fonts
                
                 i++;
                 checkqty.Text = i.ToString();
+
+                price = double.Parse(_price) * i;
                 
-                string j = _price;
-                decimal x = Convert.ToDecimal(j);
-                decimal v = i * x;
-                checkprc.Text = v.ToString();
+                checkprc.Text = $"$ {price}";
+                //Cart.cartInst.Refresh();
+                Cart.cartInst.subTotal += price;
+
+
+
+                
 
             }
             else
@@ -97,7 +103,10 @@ namespace FastFoodManagmentSystem.Fonts
             {
                 i--;
                 checkqty.Text = i.ToString();
-                
+                price -= double.Parse(_price);
+                Cart.cartInst.subTotal -= price;
+                checkprc.Text = $"$ {price}";
+
             }
             else
             {

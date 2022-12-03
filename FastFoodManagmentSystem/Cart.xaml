@@ -65,7 +65,7 @@
                             </Border.Effect>
 
                             <Grid Grid.Row="0" Margin="-1,-1,0,0" >
-                            <Grid.RowDefinitions>
+                                <Grid.RowDefinitions>
                                     <RowDefinition Height="28*"/>
                                     <RowDefinition Height="253*"/>
                                 </Grid.RowDefinitions>
@@ -136,12 +136,12 @@
 
                             <Canvas Grid.Row="3" Grid.Column="1">
                                 <Label Style="{StaticResource cnct-lb}" Content="City *" HorizontalAlignment="Center" VerticalAlignment="Center" Width="202" Canvas.Top="1"/>
-                                <TextBox x:Name="staddtxt" Height="30" Width="270" FontSize="22"  HorizontalAlignment="Center" Canvas.Top="31" VerticalAlignment="Top"/>
+                                <TextBox x:Name="citytxt" Height="30" Width="270" FontSize="22"  HorizontalAlignment="Center" Canvas.Top="31" VerticalAlignment="Top"/>
                             </Canvas>
 
                             <Canvas Grid.Row="3" Grid.Column="1" Margin="0,64,161,0" Grid.RowSpan="2">
                                 <Label Style="{StaticResource cnct-lb}" Content="State *"/>
-                                <TextBox x:Name="citytxt" Height="30" FontSize="22"  HorizontalAlignment="Left" Canvas.Top="32" VerticalAlignment="Center" Width="169"/>
+                                <TextBox x:Name="statetxt" Height="30" FontSize="22"  HorizontalAlignment="Left" Canvas.Top="32" VerticalAlignment="Center" Width="169"/>
                             </Canvas>
 
                             <Canvas Grid.Row="3" Grid.Column="1" Margin="184,64,0,0" Grid.RowSpan="2">
@@ -163,11 +163,11 @@
                             <Label Content="Order Summary" FontSize="32" FontFamily="{StaticResource Carmen}"/>
                             <Canvas Margin="0,52,0,223" HorizontalAlignment="Center" Width="274">
                                 <Label Content="Items subtotal: " FontSize="16" FontFamily="{StaticResource Carmen}" Width="140" Height="30" VerticalAlignment="Bottom"/>
-                                <Label x:Name="subtl" Content="$100.00" FontFamily="{StaticResource Carmen}" FontSize="16" Width="82" Canvas.Left="192"/>
+                                <Label x:Name="subtl" x:FieldModifier="public"  Content="$100.00" FontFamily="{StaticResource Carmen}" FontSize="16" Width="82" Canvas.Left="192"/>
                             </Canvas>
                             <Canvas HorizontalAlignment="Center" Width="274" Margin="0,87,0,188">
                                 <Label Content="Dlivery Fee: " FontSize="16" FontFamily="{StaticResource Carmen}" Width="140" Height="30" VerticalAlignment="Bottom"/>
-                                <Label x:Name="Dev" Content="$100.00" FontFamily="{StaticResource Carmen}" FontSize="16" Width="82" Canvas.Left="192"/>
+                                <Label x:Name="Dev" Content="$10.00" FontFamily="{StaticResource Carmen}" FontSize="16" Width="82" Canvas.Left="192"/>
                             </Canvas>
                             <Canvas HorizontalAlignment="Center" Width="274" Margin="0,122,0,153">
                                 <Label Content="Tax &amp; Fee: " FontSize="16" FontFamily="{StaticResource Carmen}" Width="140" Height="30" VerticalAlignment="Bottom"/>
@@ -175,14 +175,14 @@
                             </Canvas>
                             <Canvas HorizontalAlignment="Center" Width="274" Margin="0,157,0,100">
                                 <Label Content="Total: " FontSize="26" FontFamily="{StaticResource Carmen}" Width="140" Height="42" VerticalAlignment="Top" HorizontalAlignment="Center" Canvas.Top="5"/>
-                                <Label x:Name="total" Content="$100.00" FontFamily="{StaticResource Carmen}" FontSize="24" Width="111" Canvas.Left="163" Canvas.Top="4" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <Label x:Name="total" Content="$100.00" FontFamily="{StaticResource Carmen}" FontSize="24" Width="119" Canvas.Left="155" Canvas.Top="4" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                             </Canvas>
                             <Border>
                                 <Border.Effect>
                                     <DropShadowEffect Color="Gray" ShadowDepth="2"/>
                                 </Border.Effect>
-                                <Button x:Name="chckbtn" Content="Proceed to Check Out" MouseLeftButtonDown="chckbtn_MouseLeftButtonDown" Cursor="Hand" Background="{StaticResource SecondayYellow}" 
-                                        FontFamily="{StaticResource Insaniburger}" Foreground="White" FontSize="16"  HorizontalAlignment="Center" VerticalAlignment="Top" Width="275" Height="36" Margin="0,234,0,0"/>
+                                <Button x:Name="chckbtn" Content="Proceed to Check Out" Cursor="Hand" Background="{StaticResource SecondayYellow}" 
+                                        FontFamily="{StaticResource Insaniburger}" Foreground="White" FontSize="16"  HorizontalAlignment="Center" VerticalAlignment="Top" Width="275" Height="36" Margin="0,234,0,0" Click="chckbtn_Click"/>
                             </Border>
                         </Grid>
                     </Border>
