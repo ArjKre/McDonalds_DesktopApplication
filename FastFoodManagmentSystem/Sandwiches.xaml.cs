@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -94,6 +95,7 @@ namespace FastFoodManagmentSystem
 
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            Sand1.Source = new BitmapImage(new Uri(@"Images\Cart-Green.png", UriKind.Relative));
             DatabaseConnection.connection.Open();
             DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 9", DatabaseConnection.connection);
             DatabaseConnection.command.ExecuteNonQuery();
@@ -102,7 +104,7 @@ namespace FastFoodManagmentSystem
 
         private void Image_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
         {
-
+            Sand2.Source = new BitmapImage(new Uri(@"Images\Cart-Green.png", UriKind.Relative));
             DatabaseConnection.connection.Open();
             DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 10", DatabaseConnection.connection);
             DatabaseConnection.command.ExecuteNonQuery();
@@ -111,6 +113,7 @@ namespace FastFoodManagmentSystem
 
         private void Image_MouseLeftButtonDown_2(object sender, MouseButtonEventArgs e)
         {
+            Sand3.Source = new BitmapImage(new Uri(@"Images\Cart-Green.png", UriKind.Relative));
             DatabaseConnection.connection.Open();
             DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 11", DatabaseConnection.connection);
             DatabaseConnection.command.ExecuteNonQuery();
@@ -119,6 +122,7 @@ namespace FastFoodManagmentSystem
 
         private void Image_MouseLeftButtonDown_3(object sender, MouseButtonEventArgs e)
         {
+            Sand4.Source = new BitmapImage(new Uri(@"Images\Cart-Green.png", UriKind.Relative));
             DatabaseConnection.connection.Open();
             DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 12", DatabaseConnection.connection);
             DatabaseConnection.command.ExecuteNonQuery();
@@ -127,6 +131,7 @@ namespace FastFoodManagmentSystem
 
         private void Image_MouseLeftButtonDown_4(object sender, MouseButtonEventArgs e)
         {
+            Sand5.Source = new BitmapImage(new Uri(@"Images\Cart-Green.png", UriKind.Relative));
             DatabaseConnection.connection.Open();
             DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 13", DatabaseConnection.connection);
             DatabaseConnection.command.ExecuteNonQuery();
@@ -135,6 +140,7 @@ namespace FastFoodManagmentSystem
 
         private void Image_MouseLeftButtonDown_5(object sender, MouseButtonEventArgs e)
         {
+            Sand6.Source = new BitmapImage(new Uri(@"Images\Cart-Green.png", UriKind.Relative));
             DatabaseConnection.connection.Open();
             DatabaseConnection.command = new SqlCommand("INSERT INTO Cart_tbl(Prod_id,Cat_id,Price,Prod_name,Thumbnail) SELECT Prod_id, Cat_id,Price,Prod_name,Thumbnail FROM Products_tbl WHERE Prod_id = 14", DatabaseConnection.connection);
             DatabaseConnection.command.ExecuteNonQuery();

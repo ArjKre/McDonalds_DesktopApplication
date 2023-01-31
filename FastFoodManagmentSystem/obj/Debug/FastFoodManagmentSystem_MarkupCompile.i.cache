@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\App.xaml
-101241096871
+15-2066798663
 
-16909906765
-161314364606
-Beverages.xaml;Cart.xaml;CartUserControl.xaml;HappyMeal.xaml;Home.xaml;Login.xaml;MainWindow.xaml;Menu.xaml;Sandwiches.xaml;Treats.xaml;
+21-1722984869
+17834671082
+Admin.xaml;AdminOrders.xaml;Beverages.xaml;Cart.xaml;CartUserControl.xaml;HappyMeal.xaml;Home.xaml;Login.xaml;MainWindow.xaml;Menu.xaml;Popups\CheckoutPopup1.xaml;Popups\CheckoutPopup2.xaml;Popups\Detailpopup.xaml;Sandwiches.xaml;Treats.xaml;
 
 True
 

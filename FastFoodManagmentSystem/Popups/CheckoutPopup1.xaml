@@ -1,0 +1,27 @@
+﻿<Window x:Class="FastFoodManagmentSystem.Popups.CheckoutPopup1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FastFoodManagmentSystem.Popups"
+        mc:Ignorable="d"
+        Height="150" Width="395" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" Background="White" BorderBrush="Black" BorderThickness="1">
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid Panel.ZIndex="0" Margin="0,0,0,36" Background="#FFB9160F"/>
+                <Image x:Name="close" Source="/Images/close.png" Width="35" HorizontalAlignment="Left" Cursor="Hand" MouseLeftButtonDown="close_MouseLeftButtonDown" Margin="360,0,0,38"/>
+                <Image Source="/Images/logo.jpg" Margin="135,4,135,-4" />
+            </Grid>
+            <Border Grid.Row="1" CornerRadius="25 25 25 25">
+                <TextBlock FontFamily="{DynamicResource Insaniburger}" Foreground="Black" Opacity="0.85" FontSize="14" HorizontalAlignment="Center" Height="23">Thank You! For Choosing McDonald's For Your Meal.</TextBlock>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

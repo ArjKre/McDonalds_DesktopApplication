@@ -9,7 +9,7 @@ namespace FastFoodManagmentSystem
 {
     internal class DatabaseConnection
     {
-        public static SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-9NS1BJAQ\SQLEXPRESS;Initial Catalog=dtbs_FFMS;Integrated Security=True");
+        public static SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-9NS1BJAQ\SQLEXPRESS;Initial Catalog=dtbs_McDonalds;Integrated Security=True");
         public static SqlCommand command;
 
     }

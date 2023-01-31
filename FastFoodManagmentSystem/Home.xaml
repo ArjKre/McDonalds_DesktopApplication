@@ -9,16 +9,16 @@
         Background="Transparent" ResizeMode="NoResize" Loaded="Window_Loaded">
 
 
-    <Grid MouseDown="Grid_MouseDown">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" Panel.ZIndex="1" CornerRadius="25 25 0 0" Background="#cc0001" BorderThickness="0">
+        <Border Grid.Row="0" MouseDown="Grid_MouseDown" Panel.ZIndex="1" CornerRadius="25 25 0 0" Background="#cc0001" BorderThickness="0">
             <Grid>
 
-                <Image Source="/Images/logoTransparant.png" Margin="16,10,827,-63" />
+                <Image Source="/Images/logoTransparant.png" MouseLeftButtonDown="Image_MouseLeftButtonDown" Cursor="Hand"  Margin="16,10,827,-63" />
                 <Image x:Name="close" Source="/Images/close.png" Style="{StaticResource iconApp}" Margin="0,0,15,0" MouseLeftButtonDown="close_MouseLeftButtonDown"/>
                 <Image x:Name="minimize" Source="/Images/minimize.png" Style="{StaticResource iconApp}" Margin="0,0,70,0" MouseLeftButtonDown="minimize_MouseLeftButtonDown" />
 

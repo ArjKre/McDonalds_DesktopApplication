@@ -1,5 +1,7 @@
 ﻿
 FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\App.xaml;;
+FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\Admin.xaml;;
+FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\AdminOrders.xaml;;
 FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\Beverages.xaml;;
 FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\Cart.xaml;;
 FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\CartUserControl.xaml;;
@@ -8,6 +10,9 @@ FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\
 FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\Login.xaml;;
 FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\MainWindow.xaml;;
 FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\Menu.xaml;;
+FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\Popups\CheckoutPopup1.xaml;;
+FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\Popups\CheckoutPopup2.xaml;;
+FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\Popups\Detailpopup.xaml;;
 FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\Sandwiches.xaml;;
 FC:\Users\ArjunKre\Desktop\McDonalds_DesktopApplication\FastFoodManagmentSystem\Treats.xaml;;
 

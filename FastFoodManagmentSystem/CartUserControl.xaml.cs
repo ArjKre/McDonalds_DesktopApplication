@@ -28,9 +28,11 @@ namespace FastFoodManagmentSystem.Fonts
         private int i = 1;
         private double price;
         public double qtnprice;
+        public CartUserControl Userinst;
         public CartUserControl()
         {
             InitializeComponent();
+            Userinst = this;
         }
 
         
@@ -42,7 +44,7 @@ namespace FastFoodManagmentSystem.Fonts
             }
         }
 
-        public string Image
+        public string _Image
         {
             get { return _image; }
             set { _image = value;
@@ -51,7 +53,7 @@ namespace FastFoodManagmentSystem.Fonts
         }
 
         
-        public string Price
+        public string _Price
         {
             get { return _price; }
             set { _price = value;
@@ -68,6 +70,10 @@ namespace FastFoodManagmentSystem.Fonts
             int res = cmd.ExecuteNonQuery();
             Cart.cartInst.fetchData();
             DatabaseConnection.connection.Close();
+            Cart.cartInst.subTotal = Cart.cartInst.subTotal - price; 
+            DatabaseConnection.connection.Close();
+
+
         }
        
         
@@ -78,16 +84,9 @@ namespace FastFoodManagmentSystem.Fonts
                
                 i++;
                 checkqty.Text = i.ToString();
-
                 price = double.Parse(_price) * i;
-                
                 checkprc.Text = $"$ {price}";
-                //Cart.cartInst.Refresh();
-                Cart.cartInst.subTotal += price;
 
-
-
-                
 
             }
             else
@@ -104,8 +103,8 @@ namespace FastFoodManagmentSystem.Fonts
                 i--;
                 checkqty.Text = i.ToString();
                 price -= double.Parse(_price);
-                Cart.cartInst.subTotal -= price;
                 checkprc.Text = $"$ {price}";
+               
 
             }
             else
@@ -118,9 +117,6 @@ namespace FastFoodManagmentSystem.Fonts
             }
         }
 
-        private void checkprc_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-        }
+       
     }
 }

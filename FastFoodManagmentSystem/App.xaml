@@ -48,6 +48,8 @@
             </Style.Triggers>
         </Style>
 
+        
+        
         <Style x:Key="shadow-effect" TargetType="Border">
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
@@ -74,27 +76,50 @@
             </Style.Triggers>
         </Style>
 
-
         <Style TargetType="Button" x:Key="rndbtn">
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="TextElement.FontFamily" Value="{DynamicResource Insaniburger}"/>
             <Setter Property="Background" Value="#CF240A"/>
             <Setter Property="Foreground" Value="White"/>
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="{TemplateBinding Property=Border.CornerRadius}" Background="Transparent" BorderBrush="Transparent" BorderThickness="0,1,1,0" >
+                            <Grid Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#CF240A"/>
+                    <Setter Property="Cursor" Value="Hand"/>
                     <Setter Property="Button.Effect">
                         <Setter.Value>
                             <DropShadowEffect/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
+                <Trigger Property="IsMouseOver" Value="false">
+                    <Setter Property="Background" Value="{StaticResource PrimaryRed}"/>
+                </Trigger>
             </Style.Triggers>
+        </Style>
+
+        <!--<Style TargetType="Button" x:Key="rndbtn">
             <Style.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Style.Resources>
-        </Style>
+        </Style>-->
+
+
+        
+        
 
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="Gainsboro"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#CF240A"/>
@@ -290,6 +315,7 @@
             </Setter>
         </Style>-->
 
+        
 
     </Application.Resources>
 </Application>

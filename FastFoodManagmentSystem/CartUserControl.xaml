@@ -13,7 +13,7 @@
         <Image x:Name="inc" Source="/Images/plus.png" Cursor="Hand" MouseLeftButtonDown="inc_MouseLeftButtonDown"  Canvas.Left="463" Canvas.Top="46"  Height="26" Width="25" HorizontalAlignment="Center" VerticalAlignment="Center" />
         <Image x:Name="dec" Source="/Images/minus.png" Cursor="Hand" MouseLeftButtonDown="dec_MouseLeftButtonDown" Canvas.Left="406" Canvas.Top="46" Height="26" Width="25" HorizontalAlignment="Left" VerticalAlignment="Center" />
         <TextBlock x:Name="checkqty" Text="1"  FontFamily="{StaticResource Carmen}" FontSize="16" Canvas.Left="436" Canvas.Top="46" HorizontalAlignment="Left" VerticalAlignment="Top" Width="22"/>
-        <TextBlock x:Name="checkprc" Text="$100"  FontFamily="{StaticResource Carmen}" FontSize="18" Canvas.Left="530" Canvas.Top="45" HorizontalAlignment="Left" VerticalAlignment="Center" Width="74" Loaded="checkprc_Loaded"/>
+        <TextBlock x:Name="checkprc" Text="$100"  FontFamily="{StaticResource Carmen}" FontSize="18" Canvas.Left="530" Canvas.Top="45" HorizontalAlignment="Left" VerticalAlignment="Center" Width="74"/>
         <Image x:Name="rmve" Source="/Images/multiply.png" Cursor="Hand" MouseLeftButtonDown="rmve_MouseLeftButtonDown" Canvas.Left="630" Canvas.Top="43" Height="29" Width="30" HorizontalAlignment="Center" VerticalAlignment="Top" />
         <Border BorderBrush="Gray" BorderThickness="0,0,0,1" Height="2" Width="633" Canvas.Left="27" Canvas.Top="112" HorizontalAlignment="Left" VerticalAlignment="Center"/>
     </Canvas>

@@ -137,5 +137,12 @@ namespace FastFoodManagmentSystem
             Timer.Stop();
             ChangedCheck();
         }
+
+        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Hide();
+        }
     }
 }

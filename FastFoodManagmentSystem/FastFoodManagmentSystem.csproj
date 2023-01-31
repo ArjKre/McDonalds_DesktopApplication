@@ -58,6 +58,9 @@
     <ApplicationIcon>Images\Desktop.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CSharpVitamins.ShortGuid, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CSharpVitamins.ShortGuid.2.0.0\lib\net40\CSharpVitamins.ShortGuid.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -81,6 +84,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminOrders.xaml.cs">
+      <DependentUpon>AdminOrders.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Beverages.xaml.cs">
       <DependentUpon>Beverages.xaml</DependentUpon>
     </Compile>
@@ -91,12 +100,29 @@
     <Compile Include="HappyMeal.xaml.cs">
       <DependentUpon>HappyMeal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Popups\CheckoutPopup1.xaml.cs">
+      <DependentUpon>CheckoutPopup1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\CheckoutPopup2.xaml.cs">
+      <DependentUpon>CheckoutPopup2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\Detailpopup.xaml.cs">
+      <DependentUpon>Detailpopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sandwiches.xaml.cs">
       <DependentUpon>Sandwiches.xaml</DependentUpon>
     </Compile>
     <Compile Include="Treats.xaml.cs">
       <DependentUpon>Treats.xaml</DependentUpon>
     </Compile>
+    <Page Include="Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminOrders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Beverages.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -143,6 +169,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Popups\CheckoutPopup1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Popups\CheckoutPopup2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Popups\Detailpopup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -196,6 +234,7 @@
     <Resource Include="Fonts\Carmen Sans SemiBold.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -326,6 +365,26 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Notes\ToDoList.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Admin\AdminBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Admin\AdminBackground%282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Admin\Screenshot 2022-12-09 191435.jpg" />
+    <Resource Include="Images\Admin\Screenshot 2022-12-09 191456.jpg" />
+    <Resource Include="Images\Admin\Screenshot 2022-12-09 191523.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Cart-Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Cart-Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

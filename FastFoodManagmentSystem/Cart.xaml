@@ -3,36 +3,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:Fonts="clr-namespace:FastFoodManagmentSystem.Fonts" x:Class="FastFoodManagmentSystem.Cart"
+        xmlns:Fonts="clr-namespace:FastFoodManagmentSystem.Fonts" xmlns:local="clr-namespace:FastFoodManagmentSystem" x:Class="FastFoodManagmentSystem.Cart"
         mc:Ignorable="d"
         Title="Cart" Height="728" Width="1024"  WindowStyle="None" WindowStartupLocation="CenterScreen" AllowsTransparency="True"
         Background="Transparent" ResizeMode="NoResize" Loaded="Window_Loaded">
 
 
-    <Grid MouseDown="Grid_MouseDown">
+
+
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" Panel.ZIndex="1" CornerRadius="15 15 0 0" Background="#cc0001" BorderThickness="0">
+        <Border Grid.Row="0" MouseDown="Grid_MouseDown" Panel.ZIndex="1" CornerRadius="15 15 0 0" Background="#cc0001" BorderThickness="0">
             <Grid>
                 <Image Source="/Images/back.png" Cursor="Hand" Margin="0,0,937,0" Style="{StaticResource iconApp}" MouseLeftButtonDown="Image_MouseLeftButtonDown_1"  />
                 <Image Source="/Images/logoTransparant.png" Margin="422,10,422,-63" Cursor="Hand" MouseEnter="Image_MouseEnter" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
                 <Image x:Name="close" Source="/Images/close.png" Style="{StaticResource iconApp}" Margin="0,0,15,0" MouseLeftButtonDown="close_MouseLeftButtonDown"/>
                 <Image x:Name="minimize" Source="/Images/minimize.png" Style="{StaticResource iconApp}" Margin="0,0,70,0" MouseLeftButtonDown="minimize_MouseLeftButtonDown" />
 
-                <!--<Button x:Name="homebtn" Content="HOME" Style="{StaticResource rndbtn}"
-                    Width="140" Margin="490,28,394,-28" Background="{StaticResource SecondayYellow}"
-                        Foreground="White"/>
-
-                <Button x:Name="Menubtn" Content="MENU" Style="{StaticResource rndbtn}"
-                    Width="140" Margin="683,28,201,-28" Background="{StaticResource SecondayYellow}"
-                        Foreground="White" Click="Menubtn_Click"/>
-
-                <Button x:Name="Cartbtn" Content="CART" Style="{StaticResource rndbtn}"
-                    Width="140" Margin="301,28,583,-28" Background="{StaticResource SecondayYellow}"
-                        Foreground="White" Click="Cartbtn_Click" />-->
+               
             </Grid>
         </Border>
 
@@ -163,25 +155,25 @@
                             <Label Content="Order Summary" FontSize="32" FontFamily="{StaticResource Carmen}"/>
                             <Canvas Margin="0,52,0,223" HorizontalAlignment="Center" Width="274">
                                 <Label Content="Items subtotal: " FontSize="16" FontFamily="{StaticResource Carmen}" Width="140" Height="30" VerticalAlignment="Bottom"/>
-                                <Label x:Name="subtl" x:FieldModifier="public"  Content="$100.00" FontFamily="{StaticResource Carmen}" FontSize="16" Width="82" Canvas.Left="192"/>
+                                <Label x:Name="subtl" Content="$ 0.00"  x:FieldModifier="public" FontFamily="{StaticResource Carmen}" FontSize="16" Width="82" Canvas.Left="192" HorizontalAlignment="Center" Height="31" VerticalAlignment="Top"/>
                             </Canvas>
                             <Canvas HorizontalAlignment="Center" Width="274" Margin="0,87,0,188">
                                 <Label Content="Dlivery Fee: " FontSize="16" FontFamily="{StaticResource Carmen}" Width="140" Height="30" VerticalAlignment="Bottom"/>
-                                <Label x:Name="Dev" Content="$10.00" FontFamily="{StaticResource Carmen}" FontSize="16" Width="82" Canvas.Left="192"/>
+                                <Label x:Name="Dev" Content="$5.00" FontFamily="{StaticResource Carmen}" FontSize="16" Width="82" Canvas.Left="192"/>
                             </Canvas>
                             <Canvas HorizontalAlignment="Center" Width="274" Margin="0,122,0,153">
                                 <Label Content="Tax &amp; Fee: " FontSize="16" FontFamily="{StaticResource Carmen}" Width="140" Height="30" VerticalAlignment="Bottom"/>
-                                <Label x:Name="taxtl" Content="$100.00" FontFamily="{StaticResource Carmen}" FontSize="16" Width="82" Canvas.Left="192" Canvas.Top="-1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <Label x:Name="taxtl" Content="$0.00" FontFamily="{StaticResource Carmen}" FontSize="16" Width="82" Canvas.Left="192" Canvas.Top="-1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                             </Canvas>
                             <Canvas HorizontalAlignment="Center" Width="274" Margin="0,157,0,100">
                                 <Label Content="Total: " FontSize="26" FontFamily="{StaticResource Carmen}" Width="140" Height="42" VerticalAlignment="Top" HorizontalAlignment="Center" Canvas.Top="5"/>
-                                <Label x:Name="total" Content="$100.00" FontFamily="{StaticResource Carmen}" FontSize="24" Width="119" Canvas.Left="155" Canvas.Top="4" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <Label x:Name="total" Content="$0.00" FontFamily="{StaticResource Carmen}" FontSize="24" Width="104" Canvas.Left="170" Canvas.Top="4" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                             </Canvas>
                             <Border>
                                 <Border.Effect>
                                     <DropShadowEffect Color="Gray" ShadowDepth="2"/>
                                 </Border.Effect>
-                                <Button x:Name="chckbtn" Content="Proceed to Check Out" Cursor="Hand" Background="{StaticResource SecondayYellow}" 
+                                <Button x:Name="chckbtn" Style="{StaticResource rndbtn}" Content="Proceed to Check Out" Cursor="Hand" Background="{StaticResource SecondayYellow}" 
                                         FontFamily="{StaticResource Insaniburger}" Foreground="White" FontSize="16"  HorizontalAlignment="Center" VerticalAlignment="Top" Width="275" Height="36" Margin="0,234,0,0" Click="chckbtn_Click"/>
                             </Border>
                         </Grid>

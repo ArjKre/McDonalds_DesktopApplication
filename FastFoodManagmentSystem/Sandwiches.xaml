@@ -9,13 +9,13 @@
         Background="Transparent" ResizeMode="NoResize">
 
 
-    <Grid MouseDown="Grid_MouseDown">
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" Panel.ZIndex="1" CornerRadius="15 15 0 0" Background="#b9160f">
+        <Border Grid.Row="0" MouseDown="Grid_MouseDown" Panel.ZIndex="1" CornerRadius="15 15 0 0" Background="#b9160f">
             <Grid>
 
                 <Image Source="/Images/logoTransparant.png" Margin="16,10,827,-63" />
@@ -100,7 +100,7 @@
                                     <Border.Effect>
                                         <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
                                     </Border.Effect>
-                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                    <Image x:Name="Sand1" Source="/Images/Cart-Red.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
                                 </Border>
                             </Grid>
                         </Border>
@@ -120,7 +120,7 @@
                                     <Border.Effect>
                                         <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
                                     </Border.Effect>
-                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_1" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                    <Image x:Name="Sand2" Source="/Images/Cart-Red.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_1" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
                                 </Border>
                             </Grid>
                         </Border>
@@ -139,7 +139,7 @@
                                     <Border.Effect>
                                         <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
                                     </Border.Effect>
-                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_2" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                    <Image  x:Name="Sand3" Source="/Images/Cart-Red.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_2" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
                                 </Border>
                             </Grid>
                         </Border>
@@ -158,7 +158,7 @@
                                     <Border.Effect>
                                         <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
                                     </Border.Effect>
-                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_3" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                    <Image x:Name="Sand4" Source="/Images/Cart-Red.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_3" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
                                 </Border>
                             </Grid>
                         </Border>
@@ -177,7 +177,7 @@
                                     <Border.Effect>
                                         <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
                                     </Border.Effect>
-                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_4" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                    <Image  x:Name="Sand5" Source="/Images/Cart-Red.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_4" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
                                 </Border>
                             </Grid>
                         </Border>
@@ -196,13 +196,10 @@
                                     <Border.Effect>
                                         <DropShadowEffect Color="WhiteSmoke" ShadowDepth="1"/>
                                     </Border.Effect>
-                                    <Image  Source="/Images/basket.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_5" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
+                                    <Image  x:Name="Sand6" Source="/Images/Cart-Red.png" Style="{StaticResource iconApp}" Cursor="Hand" MouseLeftButtonDown="Image_MouseLeftButtonDown_5" Height="44" Canvas.Top="4" Width="40" Canvas.Left="5" HorizontalAlignment="Left" Margin="139,189,0,0" />
                                 </Border>
                             </Grid>
                         </Border>
-
-
-
                     </Grid>
                 </Grid>
             </Border>

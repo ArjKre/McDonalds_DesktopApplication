@@ -11,8 +11,8 @@ namespace FastFoodManagmentSystem
     /// </summary>
     public partial class Login : Window
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-9NS1BJAQ\SQLEXPRESS;Initial Catalog=dtbs_FFMS;Integrated Security=True");
-        SqlCommand cmd;
+        
+        
         SqlDataReader reader;
         public Login()
         {
@@ -39,18 +39,18 @@ namespace FastFoodManagmentSystem
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            cmd = new SqlCommand("Select ID from admin_tbl where Username='" + usertxt.Text + "'and Password='" + passtxt.Text + "'", conn);
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            reader = cmd.ExecuteReader();
+            DatabaseConnection.connection.Open();
+            DatabaseConnection.command = new SqlCommand("Select ID from admin_tbl where Username='" + usertxt.Text + "'and Password='" + passtxt.Text + "'", DatabaseConnection.connection);
+            DatabaseConnection.command.ExecuteNonQuery();
+            reader = DatabaseConnection.command.ExecuteReader();
 
             if (reader.Read())
             {
                 if (Convert.ToBoolean(reader["ID"])== true)
                 {
-                    Home home = new Home();
-                    home.Show();
-                    Close();
+                    Admin admin = new Admin();
+                    admin.Show();
+                    this.Hide();
                 }
             }
             else
@@ -58,7 +58,7 @@ namespace FastFoodManagmentSystem
                 MessageBox.Show("Username or Password incorrect!","Error",MessageBoxButton.OK,MessageBoxImage.Error);
             }
 
-            conn.Close();
+            DatabaseConnection.connection.Close();
         }
     }
 }
