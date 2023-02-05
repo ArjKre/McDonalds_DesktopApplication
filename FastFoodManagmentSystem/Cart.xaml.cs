@@ -140,11 +140,11 @@ namespace FastFoodManagmentSystem
             $"Values('{billing}','{fnametxt.Text}','{lnametxt.Text}','{numtxt.Text}','{emailtxt.Text}','{addtxt.Text}','{optxt.Text}','{citytxt.Text}','{statetxt.Text}','{ziptxt.Text}')", DatabaseConnection.connection);
             DatabaseConnection.command.ExecuteNonQuery();
             //Order Info
-            //DatabaseConnection.command = new SqlCommand($"INSERT INTO Order_tbl(Billing_id,Prod_id,Prod_name,Price) SELECT '{billing}',Prod_id,Prod_name,Price FROM Cart_tbl ", DatabaseConnection.connection);
-            //DatabaseConnection.command.ExecuteNonQuery();
+            DatabaseConnection.command = new SqlCommand($"INSERT INTO Order_tbl(Billing_id,Prod_id,Prod_name,Price) SELECT '{billing}',Prod_id,Prod_name,Price FROM Cart_tbl ", DatabaseConnection.connection);
+            DatabaseConnection.command.ExecuteNonQuery();
             ////Final Bill Info
-            //DatabaseConnection.command = new SqlCommand($"INSERT INTO Bill_tbl(Billing_id,SubTotal,Delivery_Fee,Tax,Total)Values('{billing}','{subtl.Content}','{Dev.Content}','{taxtl.Content}','{total.Content}')", DatabaseConnection.connection);
-            //DatabaseConnection.command.ExecuteNonQuery();
+            DatabaseConnection.command = new SqlCommand($"INSERT INTO Bill_tbl(Billing_id,SubTotal,Delivery_Fee,Tax,Total)Values('{billing}','{subtl.Content}','{Dev.Content}','{taxtl.Content}','{total.Content}')", DatabaseConnection.connection);
+            DatabaseConnection.command.ExecuteNonQuery();
 
             DatabaseConnection.connection.Close();
                 //Thankyou popup message
